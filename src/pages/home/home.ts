@@ -7,9 +7,9 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
+  private notes: string[] = [];
 
   constructor(public navCtrl: NavController) {
-
+    this.notes.push('the house code is 1234');
   }
-
 }
