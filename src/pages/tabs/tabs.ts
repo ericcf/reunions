@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavController } from 'ionic-angular';
 
 import { HomePage } from '../home/home';
 import { MapPage } from '../map/map';
@@ -12,7 +13,5 @@ export class TabsPage {
   tab1Root: any = HomePage;
   tab2Root: any = MapPage;
 
-  constructor() {
-
-  }
+  constructor(public navCtrl: NavController) { }
 }

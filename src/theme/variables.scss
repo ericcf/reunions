@@ -15,6 +15,7 @@ $font-path: "../assets/fonts";
 
 $background-color: #888;
 $text-color: #eee;
+$text-input-placeholder-color: #ddd;
 $toolbar-background: orange;
 
 
@@ -27,7 +28,7 @@ $toolbar-background: orange;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #387ef5,
+  primary:    #0033ff,
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,

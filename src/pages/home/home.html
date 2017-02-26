@@ -7,7 +7,7 @@
 <ion-content padding>
   <h2>Welcome to Atlanta!</h2>
 
-  <ul *ngFor="let note of notes">
-    <li>{{note}}</li>
+  <ul *ngFor="let note of notes | async">
+    <li>{{note.$value}}</li>
   </ul>
 </ion-content>

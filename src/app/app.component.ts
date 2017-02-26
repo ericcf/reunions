@@ -1,22 +1,26 @@
-import { Component } from '@angular/core';
-import { Platform } from 'ionic-angular';
-import { StatusBar, Splashscreen } from 'ionic-native';
+import { Component, ViewChild } from '@angular/core';
+import { Nav, Platform } from 'ionic-angular';
 
-import { TabsPage } from '../pages/tabs/tabs';
-
+import { LoginPage } from '../pages/login/login';
+import { AuthData } from '../auth/auth-data.service';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage = TabsPage;
+  @ViewChild(Nav) nav: Nav;
 
-  constructor(platform: Platform) {
+  rootPage = LoginPage;
+
+  constructor(platform: Platform, private authData: AuthData) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
-      StatusBar.styleDefault();
-      Splashscreen.hide();
     });
+  }
+
+  signOut() {
+    this.authData.signOut();
+    this.nav.setRoot(LoginPage);
   }
 }
